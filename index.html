@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Taj Hotel</title>
+	<link href="bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="overlay"></div>
+	<head>
+		<nav class="navbar navbar-expand bg-dark">
+				<a href="#" class="navbar-brand mx-4">
+					<img src="logo.png" class="img-fluid" width="50px">
+				</a>
+				<div class="mx-auto">
+					<h1 class="display-5 text-light">Welcome To Taj Hotel</h1>
+				</div>
+		</nav>
+	</head>
+	<main class="mt-4">
+		<section class="container col-6">
+			<div id="parent">
+				<div class="card">
+					<div class="card-header d-flex justify-content-center text-nowrap">
+						<a href="#menu" data-bs-toggle="collapse" class="card-link collapsed">Main Menu</a>
+					</div>
+					<div class="collapse" data-bs-parent="#parent" id="menu">
+						<div class="card-body mx-auto col-6">
+							<select class="form-select form-select-md" id="selection">
+								<option selected value="0">Select Menu</option>
+								<option value="1">Soup</option>
+								<option value="2">Punjabi</option>
+								<option value="3">Chinese</option>
+								<option value="4">South Indian</option>
+								<option value="5">Juice</option>
+								<option value="6">Ice-Cream</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container my-4 d-none" id="main-menu">
+			<div class="menu overflow-hidden position-relative px-4">
+				<div class="overlay"></div>
+				<div class="row my-2">
+					<div class="col-3 text-center">
+						<h5 class="text-light">Item Name</h5></div>
+					<div class="col-3 text-center">
+						<h5 class="text-light">Price</h5></div>
+					<div class="col-3 text-center">
+						<h5 class="text-light">Qty</h5></div>
+					<div class="col-3 text-center">
+						<h5 class="text-light">Total</h5></div>
+				</div>
+				<div class="row my-2">
+					<div class="col-3 text-center">
+						<select class="form-select" disabled="true">
+							<option selected>Select Item</option>
+							<option value="Tomato">Tomato</option>
+							<option value="Minestone">Minestone</option>
+							<option value="Hot n Sour">Hot n Sour</option>
+						</select>
+					</div>
+					<div class="col-3 text-center">
+						<input type="text" name="value" placeholder=" - " class="form-control" disabled>
+					</div>
+					<div class="col-3 text-center">
+						<input type="text" name="qty" placeholder=" - " class="form-control" disabled="true">
+					</div>
+					<div class="col-3 text-center"><input type="text" name="Total" class="form-control" disabled></div>
+				</div>
+				<div class="row my-2">
+					<div class="col-3 text-center">
+						<select class="form-select" disabled="true">
+							<option selected>Select Item</option>
+							<option value="panirTika">Panir Tika</option>
+							<option value="panirBhurji">Panir Bhurji</option>
+							<option value="vegKadai">Veg. Kadai</option>
+						</select>
+					</div>
+					<div class="col-3 text-center">
+						<input type="text" name="value" placeholder=" - " class="form-control" disabled>
+					</div>
+					<div class="col-3 text-center">
+						<input type="text" name="qty" placeholder=" - " class="form-control" disabled="true">
+					</div>
+					<div class="col-3 text-center"><input type="text" name="Total" class="form-control" disabled></div>
+				</div>
+				<div class="row my-2">
+					<div class="col-3 text-center">
+						<select class="form-select" disabled="true">
+							<option selected>Select Item</option>
+							<option value="hakkaNoodels">Hakka Noodels</option>
+							<option value="americanChopcy">American Chopcy</option>
+							<option value="manchurian">Manchurian</option>
+						</select>
+					</div>
+					<div class="col-3 text-center">
+						<input type="text" name="value" placeholder=" - " class="form-control" disabled>
+					</div>
+					<div class="col-3 text-center">
+						<input type="text" name="qty" placeholder=" - " class="form-control" disabled="true">
+					</div>
+					<div class="col-3 text-center"><input type="text" name="Total" class="form-control" disabled></div>
+				</div>
+				<div class="row my-2">
+					<div class="col-3 text-center">
+						<select class="form-select" disabled="true">
+							<option selected>Select Item</option>
+							<option value="masalaDhosa">Masala Dhosa</option>
+							<option value="idliSambhar">Idli Sambhar</option>
+							<option value="uttapam">Uttapam</option>
+						</select>
+					</div>
+					<div class="col-3 text-center">
+						<input type="text" name="value" placeholder=" - " class="form-control" disabled>
+					</div>
+					<div class="col-3 text-center">
+						<input type="text" name="qty" placeholder=" - " class="form-control" disabled="true">
+					</div>
+					<div class="col-3 text-center"><input type="text" name="Total" class="form-control" disabled></div>
+				</div>
+				<div class="row my-2">
+					<div class="col-3 text-center">
+						<select class="form-select" disabled="true">
+							<option selected>Select Item</option>
+							<option value="orange">Orange Juice</option>
+							<option value="pineapple">Pineapple Juice</option>
+							<option value="grapes">Grapes Juice</option>
+						</select>
+					</div>
+					<div class="col-3 text-center">
+						<input type="text" name="value" placeholder=" - " class="form-control" disabled>
+					</div>
+					<div class="col-3 text-center">
+						<input type="text" name="qty" placeholder=" - " class="form-control" disabled="true">
+					</div>
+					<div class="col-3 text-center"><input type="text" name="Total" class="form-control" disabled></div>
+				</div>
+				<div class="row my-2 pb-2">
+					<div class="col-3 text-center">
+						<select class="form-select" disabled="true">
+							<option selected>Select Item</option>
+							<option value="vanila">Vanila</option>
+							<option value="chocolateChips">Chocolate Chips</option>
+						</select>
+					</div>
+					<div class="col-3 text-center">
+						<input type="text" name="value" placeholder=" - " class="form-control" disabled>
+					</div>
+					<div class="col-3 text-center">
+						<input type="text" name="qty" placeholder=" - " class="form-control" disabled="true">
+					</div>
+					<div class="col-3 text-center"><input type="text" name="Total" class="form-control" disabled></div>
+				</div>
+			</div>
+		</section>
+		<section class="container d-flex mx-auto flex-wrap mt-2 py-2 d-none" id="buttons">
+			<div class="d-flex col-md-4 col-12 justify-content-center my-2">
+				<div class="content">
+					<button type="button" class="btn btn-md btn-color text-nowrap" data-bs-toggle="collapse" data-bs-target="#calculate">Net Amount</button>
+				</div>
+				<div class="collapse" id="calculate">
+					<input type="text" name="netAmount" class="form-control mx-2" disabled="true" id="netAmount">
+				</div>
+			</div>
+			<div class="d-flex col-md-4 col-12 justify-content-center my-2">
+				<div class="content">
+					<button type="button" class="btn btn-md btn-color px-5" data-bs-toggle="collapse" data-bs-target="#calculateTax">Tax</button>
+				</div>
+				<div class="collapse" id="calculateTax">
+					<input type="text" name="tax" class="form-control mx-2" id="tax" disabled="true">
+				</div>
+			</div>
+			<div class="d-flex col-md-4 col-12 justify-content-center my-2">
+				<div class="content">
+					<button type="button" class="btn btn-md btn-color" data-bs-toggle="modal" data-bs-target="#bill" onclick="totalAmount()">Total Amount</button>
+				</div>
+				<div class="modal fade" id="bill">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header bg-dark">
+								<h2 class="modal-title text-light mx-auto">Bill</h2>
+								<button type="button" class="btn-close btn-light m-0" data-bs-dismiss="modal"></button>
+							</div>
+							<div class="modal-body" id="printBill">
+
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn m-2" data-bs-dismiss="modal">Cancel</button>
+								<a href="#" class="btn btn-success m-0" data-bs-dismiss="modal">Payment</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+<script src="bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</html>

@@ -1,0 +1,137 @@
+body
+{
+	background: url('background.jpg') repeat center center fixed;
+	background-size: cover;
+	position: relative;
+}
+.overlay
+{
+	position: absolute;
+	min-height: 100%;
+	width: 100%;
+	background: #111;
+	opacity: 0.5;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+main
+{
+	z-index: 1 !important;
+	min-height: 90vh;
+}
+.card
+{
+	border-radius: 10px;
+	border: 0px;
+	background-image: linear-gradient( 179.4deg,  rgba(33,150,243,1) 1.8%, rgba(22,255,245,0.60) 97.1% );
+}
+.card-link
+{
+	color: #fff !important;
+	font-weight: 500;
+	text-decoration: none;
+	transition: 0.1s ease;
+}
+.card-link:hover
+{
+	color: #ddd !important;
+}
+.menu
+{
+	position: relative;
+	background: url('food.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 1 !important;
+}
+.form-control,
+
+{
+	background: transparent;
+	
+}
+.form-control,
+.form-select
+{
+	background: #111;
+	outline: none;
+	border: 0px !important;
+	color: #fff;
+	text-align: center;
+}
+.form-control:focus
+{
+	background: #111;
+	color: #fff	;
+}
+.form-control:focus::placeholder
+{
+	color: #111 !important;
+}
+.form-control:disabled,
+.form-select:disabled
+{
+	background: #222;
+	outline: none;
+	border: 0px !important;
+	color: #fff;	
+}
+.form-control:focus,
+.form-select:focus,
+.form-control:disabled:focus
+{
+	box-shadow: none;
+	border: none;
+	outline: none;
+
+}
+.form-control::placeholder
+{
+	color: #fff;
+}
+.form-select:focus>option
+{
+	background: #111;
+	color: #fff;
+}
+.btn-color
+{
+	background: #111;
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+	transition: 0.1s ease;
+}
+.btn-color:hover
+{
+	background: #111;
+	color: #111;
+}
+.btn-color::before
+{
+	content: "Calculate";
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	transform: scale(0);
+	background: #fff;
+	left: 0;
+	top: 0;
+	transition: 0.2s ease;
+}
+.btn-color:hover::before
+{
+	transform: scale(1);
+}
+.btn-color:focus
+{
+	border: 0px;
+	outline: 0px;
+	box-shadow: none;
+}
