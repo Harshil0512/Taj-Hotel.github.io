@@ -116,7 +116,7 @@ function totalAmount() {
 		{
 			if(order[i-1][j]!=0)
 			{
-				bill.innerHTML=bill.innerHTML+'<div class="row"><div class="col-3 text-center"><p>'+j.toUpperCase()+'</p></div><div class="col-3 text-center"><p>'+order[i-1][j]+'</p></div><div class="col-3 text-center"><p>'+(Number(order[i-1][j])*Number(item[i-1][j])*0.1)+'</p></div><div class="col-3 text-center"><p>'+Number(order[i-1][j])*Number(item[i-1][j])+'</p></div></div>';
+				bill.innerHTML=bill.innerHTML+'<div class="row"><div class="col-3 text-center"><p style="overflow-wrap:anywhere;">'+j.toUpperCase()+'</p></div><div class="col-3 text-center"><p>'+order[i-1][j]+'</p></div><div class="col-3 text-center"><p>'+(Number(order[i-1][j])*Number(item[i-1][j])*0.1)+'</p></div><div class="col-3 text-center"><p>'+Number(order[i-1][j])*Number(item[i-1][j])+'</p></div></div>';
 			}
 		}
 	}
