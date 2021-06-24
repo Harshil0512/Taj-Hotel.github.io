@@ -73,7 +73,7 @@ main
 .form-control:disabled,
 .form-select:disabled
 {
-	background: #555;
+	background: #444;
 	outline: none;
 	border: 0px !important;
 	color: #fff;	
