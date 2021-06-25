@@ -115,7 +115,7 @@ function totalAmount() {
 	{
 		for(let j in order[i-1])
 		{
-			if(order[i-1][j]!=0)
+			if(order[i-1][j]!=0 && order[i-1][j]!=' - ')
 			{
 				bill.innerHTML=bill.innerHTML+'<div class="row"><div class="col-3 text-center"><p style="overflow-wrap:anywhere;">'+j.toUpperCase()+'</p></div><div class="col-3 text-center"><p>'+order[i-1][j]+'</p></div><div class="col-3 text-center"><p>'+(Number(order[i-1][j])*Number(item[i-1][j])*0.1)+'</p></div><div class="col-3 text-center"><p>'+Number(order[i-1][j])*Number(item[i-1][j])+'</p></div></div>';
 			}
