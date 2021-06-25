@@ -3,6 +3,7 @@ selection.setAttribute('onchange','selector()');
 selection.setAttribute('onmousedown','clears()');
 let menu=document.getElementById('main-menu');
 let subMenu=document.getElementsByClassName('row');
+let alert=document.getElementsByClassName('alert')[0];
 
 let item=[
 	{"Tomato":50,"Minestone":70,"Hot n Sour":90,"Select Item":' - '},
@@ -75,20 +76,32 @@ function calculateChange(th)
 function calculate(th) 
 {
 	let qty=subMenu[active].children[2].firstElementChild.value;
-	let total=0;
-	if(subMenu[active].children[0].firstElementChild.value!="Select Item")
-	{0
-		order[active-1][curItem]=th.value;
-	}
-	for(let i in order[active-1])
-	{	if(!isNaN(order[active-1][i]))
-		{
-				total += (Number(order[active-1][i])*Number(item[active-1][i]));
+	if(!isNaN(qty))
+	{
+		let total=0;
+		if(subMenu[active].children[0].firstElementChild.value!="Select Item")
+		{0
+			order[active-1][curItem]=th.value;
 		}
+		for(let i in order[active-1])
+		{	if(!isNaN(order[active-1][i]))
+			{
+					total += (Number(order[active-1][i])*Number(item[active-1][i]));
+			}
+		}
+		subMenu[active].children[3].firstElementChild.value=total;
+		netAmount();
+		tax();
 	}
-	subMenu[active].children[3].firstElementChild.value=total;
-	netAmount();
-	tax();
+	else
+	{
+		alert.classList.remove('d-none');
+		setTimeout(function()
+		{
+			alert.classList.add('d-none');
+		},1000);
+		subMenu[active].children[2].firstElementChild.value=0;
+	}
 }
 
 function netAmount() 
