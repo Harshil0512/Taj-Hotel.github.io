@@ -5,20 +5,20 @@ let menu=document.getElementById('main-menu');
 let subMenu=document.getElementsByClassName('row');
 
 let item=[
-	{"Tomato":50,"Minestone":70,"Hot n Sour":90},
-	{"panirTika":90,"panirBhurji":110,"vegKadai":120},
-	{"hakkaNoodels":55,"americanChopcy":70,"manchurian":95},
-	{"masalaDhosa":40,"idliSambhar":50,"uttapam":60},
-	{"orange":20,"pineapple":30,"grapes":40},
-	{"vanila":10,"chocolateChips":20}
+	{"Tomato":50,"Minestone":70,"Hot n Sour":90,"Select Item":' - '},
+	{"panirTika":90,"panirBhurji":110,"vegKadai":120,"Select Item":' - '},
+	{"hakkaNoodels":55,"americanChopcy":70,"manchurian":95,"Select Item":' - '},
+	{"masalaDhosa":40,"idliSambhar":50,"uttapam":60,"Select Item":' - '},
+	{"orange":20,"pineapple":30,"grapes":40,"Select Item":' - '},
+	{"vanila":10,"chocolateChips":20,"Select Item":' - '}
 ];
 const order=[
-	{"Tomato":0,"Minestone":0,"Hot n Sour":0},
-	{"panirTika":0,"panirBhurji":0,"vegKadai":0},
-	{"hakkaNoodels":0,"americanChopcy":0,"manchurian":0},
-	{"masalaDhosa":0,"idliSambhar":0,"uttapam":0},
-	{"orange":0,"pineapple":0,"grapes":0},
-	{"vanila":0,"chocolateChips":0}
+	{"Tomato":0,"Minestone":0,"Hot n Sour":0,"Select Item":' - '},
+	{"panirTika":0,"panirBhurji":0,"vegKadai":0,"Select Item":' - '},
+	{"hakkaNoodels":0,"americanChopcy":0,"manchurian":0,"Select Item":' - '},
+	{"masalaDhosa":0,"idliSambhar":0,"uttapam":0,"Select Item":' - '},
+	{"orange":0,"pineapple":0,"grapes":0,"Select Item":' - '},
+	{"vanila":0,"chocolateChips":0,"Select Item":' - '}
 ]
 
 let active,curItem;
@@ -77,12 +77,13 @@ function calculate(th)
 	let total=0;
 	if(subMenu[active].children[0].firstElementChild.value!="Select Item")
 	{
-		console.log(th.value);
 		order[active-1][curItem]=th.value;
 	}
 	for(let i in order[active-1])
-	{
-		total += (Number(order[active-1][i])*Number(item[active-1][i]));
+	{	if(!isNaN(order[active-1][i]))
+		{
+				total += (Number(order[active-1][i])*Number(item[active-1][i]));
+		}
 	}
 	subMenu[active].children[3].firstElementChild.value=total;
 	netAmount();
