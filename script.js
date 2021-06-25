@@ -44,7 +44,7 @@ function selector() {
 		document.getElementById('buttons').classList.remove('d-none');
 		menu.classList.remove('d-none');
 
-		for(let i=0;i<subMenu.length;i++)
+		for(let i=1;i<subMenu.length;i++)
 		{
 			subMenu[i].children[0].firstElementChild.disabled=true;
 			subMenu[i].children[2].firstElementChild.disabled=true;
@@ -53,6 +53,7 @@ function selector() {
 				active=i;
 				subMenu[i].children[0].firstElementChild.disabled=false;
 				subMenu[i].children[2].firstElementChild.disabled=false;
+				curItem=subMenu[i].children[0].firstElementChild.value;
 			}
 		}
 	}
@@ -76,7 +77,7 @@ function calculate(th)
 	let qty=subMenu[active].children[2].firstElementChild.value;
 	let total=0;
 	if(subMenu[active].children[0].firstElementChild.value!="Select Item")
-	{
+	{0
 		order[active-1][curItem]=th.value;
 	}
 	for(let i in order[active-1])
@@ -124,6 +125,7 @@ function totalAmount() {
 	let netAmt=0;
 	for(let i=1;i<subMenu.length;i++)
 	{	
+
 		let temp=Number(subMenu[i].children[3].firstElementChild.value);
 		netAmt += isNaN(temp)?0:temp;
 	}
