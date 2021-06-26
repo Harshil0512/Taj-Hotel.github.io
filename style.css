@@ -135,3 +135,7 @@ main
 	outline: 0px;
 	box-shadow: none;
 }
+.d-none
+{
+	transition:0.1s ease;
+}
